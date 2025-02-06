@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navbar</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css">
+
+<!-- pagin css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.css" integrity="sha512-K1k7jSn9RDKEcn/ugqVVvWYu0bcS3q1w6m/5pQSnrj0bCfIqF6Wk49lkmckSb4wglvTP9V17LtS0q0XxYccXbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
+
+    
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="hospital">
+        <div class="title">
+            <h1>VIZAY &nbsp; MULTI-SPECIALITY HOSPITAL</h1>
+        </div>
+    </section>
+    <section id="select-expert">
+        <div class="expert-doctor">
+            <p class="p1">BOOK N MEET A DOCTOR</p>
+            <p class="p2">India's best online appointment scheduling platform</p>
+
+            <div class="dr-cat">
+                <select name="" id="category">
+                    <option value="">Select Category</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="Dentist">Dental</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Orthologist">Orthologist</option>
+                    <option value="Dermatologists">Dermatologists</option>
+                    <option value="Physiatrists">Physiatrists</option>
+                    <option value="Psychologist">Psychologist</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="homeimg">
+            <div class="images">   <!-- This supposed to be none when event listener runs on select field --> </div>
+        </div>
+        
+        <div class="doctor-list"> 
+            <!-- Specific category Doctor will appear inside this -->
+            <div class="displayedData">
+            <table class="doctorTable">
+                <thead class="thead">
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>Speciality</th>
+                        <th>Timing</th>
+                        <th>Fees</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="doctorBody"></tbody>
+            </table>
+           </div>
+        </div>
+        <div id="pagin"></div>
+
+    </section>
+</main>
+<!-- pagin jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- pagin cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- main js  -->
+<script src="index.js"></script>
+</body>
+</html>

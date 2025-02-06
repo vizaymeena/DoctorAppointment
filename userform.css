@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* User Submitted form */
+
+#userFormBody{
+    height: 115vh;
+    background: #3e4564;
+    display: flex;
+    flex-direction: column;
+}
+.userheader{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010b68;
+}
+
+.userheader nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+.userheader nav ul li a {
+    font-size: 20px;
+    padding: 6px 10px;
+    letter-spacing: 2px;
+    background-color: #5765a449;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.6s ease-in-out,transform 0.6s ease-in-out;
+}
+.userheader nav ul li a:hover{
+    background-color: #333eb4;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
+.filledform{
+    height: 30vh;
+    display: flex;     /* Flex when get function runs */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.filledform h2{
+    font-size: 30px;
+    letter-spacing: 2px ;
+    font-style: oblique;
+    color: white;
+    border-bottom: 4px solid rgb(15, 33, 146);
+    margin-bottom: 1em;
+}
+
+/* Table */
+#table{
+    border-spacing: 10px;
+    border-collapse: collapse;
+    border: 2px solid white;
+    padding: 10px;
+}
+.thead{
+    background-color: #1c2e7b;
+    
+}
+.thead tr th{
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 2px solid rgb(23, 7, 114);
+    padding: 8px 15px;
+}
+
+.appointBody tr td{
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: #5765a4;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    border:  2px solid rgba(20, 8, 154, 0.966);
+}
+
+.btn-edit{
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    background-color: #333eb4;
+    color: white;
+    border: 2px solid white;
+    transition: background 0.6s ease-in-out;
+    cursor: pointer;
+}
+.btn-edit:hover{
+    background-color: #010b68;
+}
+.btn-cancel{
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    transition: background 0.6s ease-in-out;
+}
+.btn-cancel:hover{
+    background-color: rgb(142, 24, 24);
+}
+
+/* Edit Form */
+.editcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+    width: 100%;
+}
+.editcont h3{
+    color: white;
+    font-size: 25px;
+    border-bottom: 4px solid red;
+}
+.edit-c1 p,.edit-c2 p{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0.2em;
+    color: rgb(21, 18, 18);
+    
+}
+.edit-c2 input,.edit-c1 input{
+
+    width: 250px;
+    color: white;
+    font-style: oblique;
+    font-weight: 530;
+    height: 30px;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+    padding: 10px 5px;
+    background-color: rgb(74, 77, 131);
+
+}
+.edit-c2 input::placeholder,.edit-c1 input::placeholder{
+
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+
+}
+
+.finalEditbtn{
+    margin-top: 0.4em;
+    width: 180px;
+    height: 30px;
+    background-color: #5765a4;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background 0.6s ease-in-out, width 0.6s ease-in-out;
+    cursor: pointer;
+}
+.finalEditbtn:hover{
+    background-color: #333eb4;
+    width: 160px;
+}

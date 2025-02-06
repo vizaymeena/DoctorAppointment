@@ -1,0 +1,213 @@
+{
+  "User": {},
+  "Doctors": [
+    {
+      "id": "1",
+      "name": "Dr. Vijay Meena",
+      "age": "24",
+      "gender": "Male",
+      "speciality": "Surgeon",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "500₹"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Aditi Meena",
+      "age": "28",
+      "gender": "Female",
+      "speciality": "Dermantologists",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "500₹"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Vishal Meena",
+      "age": "27",
+      "gender": "Male",
+      "speciality": "Dentist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "500₹"
+    },
+    {
+      "id": "4",
+      "name": "Dr. Jatin Parmar",
+      "age": "23",
+      "gender": "Male",
+      "speciality": "Physiatrists",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "2000₹"
+    },
+    {
+      "id": "5",
+      "name": "Dr. Yash Agarwal",
+      "age": "24",
+      "gender": "Male",
+      "speciality": "Cardiologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1500₹"
+    },
+    {
+      "id": "6",
+      "name": "Dr. Siddhart Israni",
+      "age": "24",
+      "gender": "Male",
+      "speciality": "Psychologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1000₹"
+    },
+    {
+      "id": "7",
+      "name": "Dr. Vijay",
+      "age": "24",
+      "gender": "Male",
+      "speciality": "Psychologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1000₹"
+    },
+    {
+      "id": "8",
+      "name": "Dr. Ragini Goswami",
+      "age": "28",
+      "gender": "Female",
+      "speciality": "Psychologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1000₹"
+    },
+    {
+      "id": "9",
+      "name": "Dr. Ragini Goswami",
+      "age": "28",
+      "gender": "Female",
+      "speciality": "Dermatologists",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1000₹"
+    },
+    {
+      "id": "10",
+      "name": "Dr. Allu Arjun",
+      "age": "35",
+      "gender": "Female",
+      "speciality": "Surgeon",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "3000₹"
+    },
+    {
+      "id": "11",
+      "name": "Dr. Patnaiyak Avinash",
+      "age": "28",
+      "gender": "Female",
+      "speciality": "Orthologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1000₹"
+    },
+    {
+      "id": "12",
+      "name": "Dr. Shivani Patnaiyak",
+      "age": "28",
+      "gender": "Female",
+      "speciality": "Orthologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "800₹"
+    },
+    {
+      "id": "13",
+      "name": "Dr. Avinash Patnaiyak",
+      "age": "28",
+      "gender": "Male",
+      "speciality": "Dentist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1200₹"
+    },
+    {
+      "id": "14",
+      "name": "Dr. Vijay Meena",
+      "gender": "Male",
+      "age": "22",
+      "speciality": "Surgeon",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "1500₹"
+    },
+    {
+      "id": "15",
+      "name": "Dr. Sita Kumari",
+      "gender": "Female",
+      "age": "30",
+      "speciality": "Dentist",
+      "timing": "9 A.M - 3 P.M",
+      "fees": "400₹"
+    },
+    {
+      "id": "16",
+      "name": "Dr. Rajesh Kumar",
+      "gender": "Male",
+      "age": "40",
+      "speciality": "Cardiologist",
+      "timing": "10 A.M - 4 P.M",
+      "fees": "700₹"
+    },
+    {
+      "id": "17",
+      "name": "Dr. Anjali Patel",
+      "gender": "Female",
+      "age": "35",
+      "speciality": "Orthologist",
+      "timing": "8 A.M - 2 P.M",
+      "fees": "600₹"
+    },
+    {
+      "id": "18",
+      "name": "Dr. Nikhil Sharma",
+      "gender": "Male",
+      "age": "28",
+      "speciality": "Dermatologist",
+      "timing": "11 A.M - 5 P.M",
+      "fees": "500₹"
+    },
+    {
+      "id": "19",
+      "name": "Dr. Priya Gupta",
+      "gender": "Female",
+      "age": "29",
+      "speciality": "Psychologist",
+      "timing": "2 P.M - 7 P.M",
+      "fees": "400₹"
+    },
+    {
+      "id": "20",
+      "name": "Dr. Rakesh Yadav",
+      "gender": "Male",
+      "age": "38",
+      "speciality": "Surgeon",
+      "timing": "9 A.M - 3 P.M",
+      "fees": "550₹"
+    },
+    {
+      "id": "21",
+      "name": "Dr. Ankit Verma",
+      "gender": "Male",
+      "age": "50",
+      "speciality": "Dentist",
+      "timing": "10 A.M - 6 P.M",
+      "fees": "450₹"
+    },
+    {
+      "id": "22",
+      "name": "Dr. Meena Bharti",
+      "gender": "Female",
+      "age": "45",
+      "speciality": "Cardiologist",
+      "timing": "12 A.M - 6 P.M",
+      "fees": "650₹"
+    },
+    {
+      "id": "23",
+      "name": "Dr. Pankaj Mishra",
+      "gender": "Male",
+      "age": "40",
+      "speciality": "Orthologist",
+      "timing": "11 A.M - 5 P.M",
+      "fees": "600₹"
+    }
+  ],
+  "Patient": []
+}
