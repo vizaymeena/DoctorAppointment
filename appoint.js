@@ -121,7 +121,7 @@ let appoint = async () => {
 let edit= async (id)=>{
 
     let url      =  `http://localhost:3000/Patient/${id}`
-    let res =  await fetch(url,{method:"GET"})
+    let res      =  await fetch(url,{method:"GET"})
     let data     =  await res.json()
 
     let editContainer = document.querySelector(".editcont")
@@ -200,7 +200,7 @@ let finalEdit=(id)=>{
     }
 
 
-    // Post Method Starts
+    // Put Method Starts
       let url  =  `http://localhost:3000/Patient/${id}`
          
            fetch(url,{method:"PUT",

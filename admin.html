@@ -11,7 +11,7 @@
     <nav class="sidebar">
         <h2>Admin Panel</h2>
         <a href="#">Dashboard</a>
-        <a href="#">Doctors</a>
+        <a href="#">Doctor Status</a>
         <a href="#">Appointments</a>
         <a href="#">Patients</a>
         <a href="#">Settings</a>
@@ -60,39 +60,45 @@
                       <option value="Psychologist">Psychologist</option>
                   </select>
                 </p>
+                <p>Consult. Fees :</p> <input id="price" type="number" placeholder="Consultancy Fees">
                 <p> Timing : </p> <input id="newDoctorTiming" type="text" placeholder="Timing">
                 <!-- POST BUTTON -->
                 <p> <input id="addDoctor"  onclick="addDoctor()" type="submit" value="Add Doctor"> </p>
-
             </div>
 
+            <div class="drsAdded"> <!-- Added Doctors --> </div>
 
-            <div class="showAddedDr">
-                <h2>Recently Added Doctors</h2>
-                <div class="tablecont">
-                    
-                   
-                   <table id="newTable">
-                       <thead class="newHead">
-                          <tr>
-                              <th>Name</th>
-                              <th>Age</th>
-                              <th>Gender</th>
-                              <th>Speciality</th>
-                              <th>Timing</th>
-                              <th>Contact</th>
-                              <th>Actions</th>
-                          </tr>
-                       </thead>
-                       <tbody class="newBody">
-                           
-                       </tbody>
-                   </table>
-                </div> 
-            </div>
-
+            <!-- Edit Doctor -->
+            <div id="editForum" class="edit-doctor_cont">  <!-- Edit Doctor --> </div>
 
         </div>
+
+        
+        <!-- All Listed Doctor -->
+        <section id="body">
+            <div id="doctors">
+                <table id="table">
+                    <thead class="thead">
+                        <tr class="headrow">
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Speciality</th>
+                            <th>Timing</th>
+                            <th>Fees</th>
+                            <th>Contact</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody class="tbody">
+        
+        
+        
+                    </tbody>
+                </table>
+            </div>
+        </section>
             
            
     </div>

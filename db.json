@@ -209,13 +209,41 @@
       "fees": "600₹"
     },
     {
-      "id": "4a0c",
+      "name": "Jatin Parmar",
+      "age": "35",
+      "gender": "male",
+      "speciality": "None",
+      "timing": "12 Am - 10 Pm",
+      "contact": "9876543210",
+      "id": "4a0c"
+    },
+    {
+      "id": "3b11",
       "name": "Vijay Meena",
       "age": "35",
       "gender": "male",
       "contact": "9876543210",
-      "speciality": "Cardiologist",
+      "speciality": "Dentist",
       "timing": "12 Am - 10 Pm"
+    },
+    {
+      "id": "4856",
+      "name": "Vijay Meena",
+      "age": "35",
+      "gender": "male",
+      "contact": "9876543210",
+      "speciality": "Dentist",
+      "Consultancy": "2000",
+      "timing": "12 Am - 10 Pm"
+    },
+    {
+      "name": "Jatin Parmar",
+      "age": "35",
+      "gender": "male",
+      "speciality": "Cardiologist",
+      "timing": "12 Am - 10 Pm",
+      "contact": "9876543210",
+      "id": "1147"
     }
   ],
   "Patient": []
