@@ -207,6 +207,15 @@
       "speciality": "Orthologist",
       "timing": "11 A.M - 5 P.M",
       "fees": "600₹"
+    },
+    {
+      "id": "4a0c",
+      "name": "Vijay Meena",
+      "age": "35",
+      "gender": "male",
+      "contact": "9876543210",
+      "speciality": "Cardiologist",
+      "timing": "12 Am - 10 Pm"
     }
   ],
   "Patient": []

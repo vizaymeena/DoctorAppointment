@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    
+</head>
+<body onload="getNewDoctor()">
+    <nav class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Doctors</a>
+        <a href="#">Appointments</a>
+        <a href="#">Patients</a>
+        <a href="#">Settings</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="card">
+                <h2>Total Doctors</h2>
+                <p>15</p>
+            </div>
+            <div class="card">
+                <h2>Total Appointments</h2>
+                <p>120</p>
+            </div>
+        </div>
+
+       
+        <hr class="hr1">
+
+
+        <!-- Add New Doctor -->
+        <div class="form-container">
+           
+
+            <div class="addDoctorForm">
+                <h2>Add New Doctor</h2>
+                <p> Name :   </p>  <input id="newDoctorName" type="text" placeholder="Name">
+                <p> Age :    </p>  <input id="newDoctorAge" type="text" placeholder="Age">
+                <p> Gender : </p>  <input id="newDoctorGender" type="text" placeholder="Gender">
+                <p> Contact :</p>  <input id="newDoctorContact" type="text" placeholder="Contact">
+
+                <p> Speciality :   
+                  <select name="" id="newDoctorSpeciality">
+                      <option value="None">Select Category</option>
+                      <option value="Surgeon">Surgeon</option>
+                      <option value="Dentist">Dental</option>
+                      <option value="Cardiologist">Cardiologist</option>
+                      <option value="Orthologist">Orthologist</option>
+                      <option value="Dermatologists">Dermatologists</option>
+                      <option value="Physiatrists">Physiatrists</option>
+                      <option value="Psychologist">Psychologist</option>
+                  </select>
+                </p>
+                <p> Timing : </p> <input id="newDoctorTiming" type="text" placeholder="Timing">
+                <!-- POST BUTTON -->
+                <p> <input id="addDoctor"  onclick="addDoctor()" type="submit" value="Add Doctor"> </p>
+
+            </div>
+
+
+            <div class="showAddedDr">
+                <h2>Recently Added Doctors</h2>
+                <div class="tablecont">
+                    
+                   
+                   <table id="newTable">
+                       <thead class="newHead">
+                          <tr>
+                              <th>Name</th>
+                              <th>Age</th>
+                              <th>Gender</th>
+                              <th>Speciality</th>
+                              <th>Timing</th>
+                              <th>Contact</th>
+                              <th>Actions</th>
+                          </tr>
+                       </thead>
+                       <tbody class="newBody">
+                           
+                       </tbody>
+                   </table>
+                </div> 
+            </div>
+
+
+        </div>
+            
+           
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

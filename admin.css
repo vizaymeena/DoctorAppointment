@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    background-color: #181818;
+    color: #ffffff;
+    height: 150vh;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1e1e2d;
+    padding-top: 20px;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar h2 {
+    color: #ffffff;
+    border-bottom: 2px solid red;
+    margin-bottom: 20px;
+    text-shadow: 2px 1px rgb(154, 26, 10);
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 0.2em;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #524f4f36;
+    color: #b1b3b0;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background: #4c5caf;
+    color: white;
+}
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    background: #353543;
+    border-bottom: 3px solid #8b8e8b;
+}
+.dashboard-container {
+    display: flex;
+    width:80%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.card {
+    background: #9d9bbc;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  
+}
+.card h2{
+    color: green;
+    text-shadow: 2px 0px rgb(217, 217, 217);
+    margin-bottom: 0.5em;
+}
+.card p{
+    color: #4c5caf;
+    font-size: 25px;
+    font-weight: 800;
+    text-shadow: 2px 0px white;
+}
+.hr1{
+    border: none;
+    height: 2.5px;
+    background-color: #2d32b4;
+    margin-bottom: 0.4em;
+}
+/* New Doctor Form */
+.form-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.form-container .addDoctorForm{
+    padding-left: 1.5em;
+    background: #8a87b2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 410px;
+    width: 350px;
+    flex-direction: column;
+}
+.addDoctorForm h2{
+    margin-bottom: 0.3em;
+    margin-left: 0.2em;
+    
+    width: fit-content;
+    padding: 0px 10px;
+    border-bottom: 2px solid rgb(13, 255, 0);
+}
+.addDoctorForm p{
+    color: rgb(9, 12, 54);
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+#newDoctorSpeciality{
+    padding: 5px 8px;
+    font-size: 12.5px;
+    letter-spacing: 2px;
+}
+.addDoctorForm input{
+    margin-bottom: 0.5em;
+    padding: 5px 0px;
+    width: 250px;
+}
+.addDoctorForm input::placeholder{
+    background-color: #4c5caf;
+    padding: 5px 10px ;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+}#addDoctor {
+    margin-top: 0.5em;
+    padding: 6px 15px;
+    background-color: #0c0932;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background 0.6s ease-in-out ;
+}
+#addDoctor:hover{
+    background-color: #07592b;
+}
+
+/* Newly Added Dr Table */
+
+.showAddedDr{
+    height: 65vh;
+    width: 80%;
+    display: none;
+    border: 2px solid black;
+}
+
+
+/* Table Styling */
+#newTable {
+    width: 100%;
+    max-width: 800px; /* Allow table to expand dynamically */
+    border-collapse: collapse;
+    color: orange;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.newHead {
+    background-color: #081d85;
+    color: white;
+}
+
+.newHead th {
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+.newBody{
+    background-color: rgba(103, 121, 165, 0.767);
+}
+
+.newBody td {
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+/* Improve spacing and structure */
+.newHead th,
+.newBody td {
+    min-width: 120px; /* Ensure consistent column width */
+}
+
+.showAddedDr {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid rgb(113, 111, 111);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    overflow-x: auto; /* Scroll if content exceeds width */
+}
+.showAddedDr h2{
+    font-size: 15px;
+    color: #6b6766;
+    margin-bottom: 0.5em;
+}
+
+.btn-actions{
+    display: flex;
+    gap: 10px;
+}
+
+#btn-edit{
+
+    padding: 5px 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.6s ease-in-out;
+
+}
+#btn-edit:hover{
+    background-color: #064419;
+}
+#btn-del{
+    padding: 5px 8px;
+    background-color: rgba(165, 42, 42, 0.726);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition:  background 0.6s ease-in-out;
+}
+#btn-del:hover{
+    background-color: red;
+}
