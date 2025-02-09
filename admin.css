@@ -1,5 +1,8 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
 
 * {
     margin: 0;
@@ -12,14 +15,14 @@
 body {
     display: flex;
     min-height: 300vh;
-    background-color: #121212;
+    background: linear-gradient(to right,rgb(6, 6, 45),rgb(104, 104, 149));
     color: white;
 }
 
 /* === Sidebar === */
 .sidebar {
     width: 250px;
-    background: #1e1e2f;
+    background: #0e0e3b;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -30,22 +33,27 @@ body {
 }
 
 .sidebar h2 {
+    text-align: center;
     font-size: 22px;
     margin-bottom: 20px;
-    color: #ff9800;
+    color: #118e32;
+    border-bottom: 2px solid gray;
 }
 
 .sidebar a {
+    margin-top: 0.3em;
     text-decoration: none;
-    color: #ccc;
+    color: white;
+    letter-spacing: 2px;
     padding: 12px;
+    background-color: rgba(0, 0, 0, 0.936);
     display: block;
     border-radius: 8px;
     transition: 0.3s ease;
 }
 
 .sidebar a:hover {
-    background: #ff9800;
+    background: #3e4483cb;
     color: #fff;
 }
 
@@ -60,7 +68,7 @@ body {
 .header {
     text-align: center;
     padding: 15px;
-    background: #1e1e2f;
+    background: #525293;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -74,7 +82,7 @@ body {
 }
 
 .card {
-    background: #22223b;
+    background: #4b8bb0ef;
     padding: 20px;
     border-radius: 10px;
     width: 48%;
@@ -88,7 +96,7 @@ body {
 }
 
 .card h2 {
-    color: #ff9800;
+    color: #8a301c;
 }
 
 .hr1 {
@@ -113,7 +121,8 @@ body {
 }
 
 .addDoctorForm h2 {
-    color: #ff9800;
+    color: #87807f;
+    border-bottom: 2px solid gray;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -135,47 +144,19 @@ body {
 }
 
 .addDoctorForm input[type="submit"] {
-    background: #ff9800;
+    background: #050404c8;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 800;
     margin-top: 10px;
     transition: 0.3s ease;
 }
 
 .addDoctorForm input[type="submit"]:hover {
-    background: #e68900;
+    background: #240f5f;
 }
 
-
-/* === Recently Added Doctor === */
-.showAddedDr {
-    background: #22223b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 48%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.showAddedDr h2 {
-    color: #ff9800;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* === Edit Doctor Section === */
-.edit-doctor_cont {
-    background: #22223b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.edit-doctor_cont h2 {
-    color: #ff9800;
-    text-align: center;
-    margin-bottom: 15px;
-}
 
 /* === Responsive Design === */
 @media (max-width: 1024px) {
@@ -246,126 +227,90 @@ body {
 
 
 /* Added Doctor */
-
-/* Doctor Card Container */
-.doctor-card {
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    color: white;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Recently Added Doctor Styling */
+.recentlypara{
+    color: #1310b8 !important;
+    border-bottom: 2px solid gray;
 }
-
-/* Hover Effect */
-.doctor-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Header */
-.doctor-header {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 10px;
-}
-
-.doctor-header span {
-    color: #ffcc00;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-/* Doctor Details */
-.doctor-details {
-    margin-top: 15px;
-}
-
-.doctor-details p {
-    font-size: 16px;
-    margin: 6px 0;
-    font-weight: 500;
-    color: #e0e0e0;
-}
-
-.doctor-details strong {
-    color: #ffcc00;
-}
-
-/* Buttons */
-.doctor-actions {
-    display: flex;
-    justify-content: space-between;
+#recentlyAddedDr {
+    min-width: 360px;
     margin-top: 20px;
-}
-
-.btn-edit, .btn-del {
-    padding: 10px 14px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-    width: 48%;
+    padding: 25px;
+    border-radius: 12px;
+    background: #1e1e2f;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
     transition: 0.3s ease-in-out;
 }
 
-/* Edit Button */
-.btn-edit {
-    background: #ffcc00;
-    color: #1f1c2c;
-    font-size: 20px;
-    letter-spacing: 2px;
-    transition: background 0.8s ease-in-out,color 0.6s ease-in-out;
+/* No Doctors Found Message */
+.no-doctor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
 }
 
-.btn-edit:hover {
-    background: #000000;
+/* Doctor Card */
+.doctor-card {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid #f4e434;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Name */
+.doctor-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1c9611;
+    margin-bottom: 10px;
+}
+
+/* Doctor Details */
+.doctor-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #34495e;
+}
+
+/* Doctor Fees Styling */
+.doctor-fees {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Icon Styling */
+.doctor-fees i {
+    margin-right: 5px;
+    color: #2ecc71;
+}
+.latestDrbuttons .edit-btn{
+    background-color: black;
     color: white;
+    padding: 8px 2px;
+    width: 100px;
+   font-size: 14px;
+   letter-spacing: 1px;
 }
-
-/* Delete Button */
-.btn-del {
-    background: #2203a8;
+.latestDrbuttons .remove-btn{
+    background-color: red;
     color: white;
-    transition: background 0.8s ease-in-out;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 5em;
 }
-
-.btn-del:hover {
-    background: #ff0000;
-}
-
-/* RESPONSIVENESS */
-@media (max-width: 480px) {
-    .doctor-card {
-        max-width: 90%;
-        height: auto;
-        padding: 15px;
-    }
-
-    .doctor-header {
-        font-size: 20px;
-    }
-
-    .doctor-details p {
-        font-size: 14px;
-    }
-
-    .btn-edit, .btn-del {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-}
-
-
 /* Added Doctor ends */
+
+
 
 /* Edit Doctor Details */
 /* Edit Doctor Form Container */
@@ -436,19 +381,35 @@ body {
     background: #d452bd;
     color: white;
     font-size: 16px;
+    width: 100px;
     font-weight: bold;
     cursor: pointer;
     border: none;
-    padding: 10px;
     border-radius: 6px;
-    width: 100%;
     transition: background 0.6s ease-in-out;
 }
 
 #addDrEditSubmit:hover {
     background: #e60096;
 }
-
+.editActions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.editActions button{
+    background: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    width: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.6s ease-in-out;
+}
 /* RESPONSIVENESS */
 @media (max-width: 480px) {
     .drEditForm {
@@ -474,42 +435,208 @@ body {
 
 /* Table Styling */
 
+
+#body {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f8f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+#body h2{
+    margin-bottom: 0.5em;
+    padding: 0px 5px;
+    color: gray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid gray;
+    width: fit-content;
+    text-shadow: 2px 0px black;
+}
+
+/* === Search Box Styling === */
+#search {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 2px;
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+}
+.pagesearch{
+    padding: 8px 10px;
+    width: 150px;
+    letter-spacing: 2px;
+    min-width: fit-content;
+    margin-bottom: 12px;
+    margin-top: 0.2em;
+    background-color: black;
+    color: white;
+    transition: background 0.6 s ease-in-out;
+}
+.pagesearch:hover{
+    background-color: #1a8e1a;
+}
+#search::placeholder {
+    color: #888;
+}
+
+#search:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
 /* === Table Styling === */
-.tablecont {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow-x: auto;
-}
-
-table {
-    width: 90%;
-    margin: auto;
+#table {
+    width: 100%;
     border-collapse: collapse;
-    background: #22223b;
+    background: #fff;
     border-radius: 10px;
-    
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-thead {
-    background: #070752;
+/* === Table Header Styling === */
+.thead {
+    background: #062342;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.thead th {
+    border: 2px solid white;
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === Table Body Rows === */
+.tbody tr {
+    background-color: #80a8be;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.5s ease-in-out,transform 0.6s ease-in-out;
+}
+
+.tbody td {
+    border: 2px solid white;
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* === Hover Effects for Rows === */
+.tbody tr:hover {
+    background: #5183c5;
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+
+/* === Buttons Styling === */
+button {
+    padding: 8px 12px;
+    margin-top: 0.3em;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* Edit Button */
+#editbutton {
+    background: #17a2b8;
     color: white;
 }
 
-thead th {
-    border: 2px solid white;
-    letter-spacing: 2px;
-    padding: 12px;
-    text-align: left;
+#editbutton:hover {
+    background: #110987;
+    box-shadow: 0 3px 6px rgba(23, 162, 184, 0.4);
 }
 
-tbody tr {
-    border-bottom: 1px solid #444;
+/* Remove Button */
+#removebutton {
+    background: #050202;
+    color: white;
 }
 
-tbody td {
-    padding: 10px;
+#removebutton:hover {
+    background: #ff0000;
+    box-shadow: 0 3px 6px rgba(220, 53, 69, 0.4);
 }
 
-tbody tr:hover {
-    background: #1e1e2f;
+/* === Pagination Styling === */
+#pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Pagination Buttons */
+.paginationjs .paginationjs-page {
+   
+    padding: 5px 5px;
+    margin-left: 0.2em;
+  
+    background: #848690;
+    color: #f6f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.paginationjs .paginationjs-page:hover {
+    background: #1a8e1a;
+    color: white;
+}
+
+/* Active Page */
+.paginationjs .paginationjs-page.active {
+    background: #180cff;
+    color: rgb(218, 0, 0);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    #body {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #table {
+        font-size: 13px;
+    }
+
+    .thead th, .tbody td {
+        padding: 10px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .paginationjs {
+        gap: 6px;
+    }
+
+    .paginationjs .paginationjs-page {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }

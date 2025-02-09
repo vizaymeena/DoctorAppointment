@@ -47,7 +47,7 @@ let addDoctor=()=>{
                 gender: dr_gender,
                 contact: dr_contact,
                 speciality: dr_speciality,
-                Consultancy:fees,
+                fees:fees,
                 timing: dr_timing
             }
         )
@@ -58,55 +58,57 @@ let addDoctor=()=>{
 
 }
 
-/* ONload Get MEthod */
-let getNewDoctor = async () => {
-   
-    let drsAdded = document.querySelector(".drsAdded");
-
+/* Show Recently Added Doctor  */
+/* "GET METHOD */
+let recentlyAddedDr = async () => {
+    let recentDoctor = document.querySelector("#recentlyAddedDr");
     let url = `http://localhost:3000/Doctors`;
-    
     let res = await fetch(url, { method: "GET" });
     let data = await res.json();
 
-    // **Do NOT overwrite the entire div** (Just clear table body)
-    drsAdded.innerHTML = ""; 
+    recentDoctor.innerHTML = ""; // Clear previous content
 
     if (data.length === 0) {
-        drsAdded.style.display = "flex";
-        drsAdded.innerHTML = `<tr><td colspan="7">No doctors have been added recently.</td></tr>`;
-    } else {
-        drsAdded.style.display = "flex";
-        let last = data[data.length - 1]; // Get the last added doctor
-
-        // Append row to table body
-        drsAdded.innerHTML += `
-         <div class="doctor-card">
-            <div class="doctor-header">
-                <h3>${last.name} <span>(${last.speciality})</span></h3>
-            </div>
-            <div class="doctor-details">
-                <p><strong>Age:</strong> ${last.age}</p>
-                <p><strong>Gender:</strong> ${last.gender}</p>
-                <p><strong>Fees:</strong> ₹&nbsp;${last.Consultancy} </p>
-                <p><strong>Timing:</strong> ${last.timing}</p>
-                <p><strong>Contact:</strong> ${last.contact}</p>
-            </div>
-            <div class="doctor-actions">
-                <button class="btn-edit" onclick="edit('${last.id}')">Edit</button>
-                <button class="btn-del" onclick="del('${last.id}')">Remove</button>
-            </div>
-        </div>
-        `;
+        recentDoctor.innerHTML = `<p class="no-doctor">No doctors have been appointed lately.</p>`;
+        return;
     }
+
+    let lastDoctor = data[data.length - 1]; // Get the last doctor added
+
+    recentDoctor.innerHTML = `
+        
+        <div class="doctor-card">
+            <p class="recentlypara">Recently Appointed</p>
+            <h3 class="doctor-name">${lastDoctor.name}</h3>
+            <p><strong>Age:</strong> ${lastDoctor.age}</p>
+            <p><strong>Gender:</strong> ${lastDoctor.gender}</p>
+            <p><strong>Speciality:</strong> ${lastDoctor.speciality}</p>
+            <p><strong>Timing:</strong> ${lastDoctor.timing}</p>
+            <p><strong>Contact:</strong> ${lastDoctor.contact}</p>
+            <p class="doctor-fees"><strong>Fees:</strong> ${lastDoctor.fees}₹</p>
+            <p class="latestDrbuttons"> 
+                <button class="edit-btn" onclick="editDoctor('${lastDoctor.id}')" >Edit</button>   
+                <button class="remove-btn" onclick="removeDoctor('${lastDoctor.id}')" >Remove</button>
+            </p>
+        </div>
+    `;
 };
+recentlyAddedDr();
+
+/* Delete Recently Added Doctor */
+let removeDoctor=(id)=>{
+    let url = `http://localhost:3000/Doctors/${id}`;
+    fetch(url,{method:"DELETE"})
+
+}
 
 
-// PUT Method
-
-let edit=async(id)=>{
+/* Update Recently Added Doctors Method */
+/* "GET METHOD FOR "PUT" */
+let editDoctor=async(id)=>{
     let url = `http://localhost:3000/Doctors/${id}`
 
-    let res = await fetch(url);
+    let res = await fetch(url,{method:"GET"});
     let data = await res.json();
 
     let editDoctor = document.querySelector(".edit-doctor_cont")
@@ -114,10 +116,7 @@ let edit=async(id)=>{
     
     // let last = data[data.length-1]
 
-
     editDoctor.innerHTML="" // Remove earlier data
-
-
 
     editDoctor.innerHTML+=
     `
@@ -129,8 +128,9 @@ let edit=async(id)=>{
                 <p> Contact :</p>  <input value="${data.contact}" id="newDrEditContact" type="text" placeholder="Contact">
 
                 <p> Speciality :   
-                  <select name="" id="newDrEditSpeciality">
-                      <option value="None">Select Category</option>
+                  <select name="" value=" ${data.speciality}" id="newDrEditSpeciality"> 
+                       
+                      <option value="">Select Category</option>
                       <option value="Surgeon">Surgeon</option>
                       <option value="Dentist">Dental</option>
                       <option value="Cardiologist">Cardiologist</option>
@@ -141,8 +141,11 @@ let edit=async(id)=>{
                   </select>
                 </p>
                 <p> Timing : </p> <input value="${data.timing}" id="newDrEditTiming" type="text" placeholder="Timing">
-                <!-- PUT BUTTON -->
-                <p> <input id="addDrEditSubmit"  onclick="finalEdit('${data.id}')" type="submit" value="Add Doctor"> </p>
+                
+                <p class="editActions"> 
+                <input id="addDrEditSubmit"  onclick="finalEdit('${data.id}')" type="submit" value="Submit"> 
+                <button onclick="cancelEdit('${data.id}')">Cancel</button>
+                </p>
 
             </div>
 
@@ -150,6 +153,8 @@ let edit=async(id)=>{
       location.href="#editForum"
 }
 
+/* Editing Doctor Details */
+/* "PUT METHOD" */
 let finalEdit=(id)=>{
 
     // Edit Input into variables
@@ -178,7 +183,6 @@ let finalEdit=(id)=>{
     }
 
     // Put method 
-
       let url = `http://localhost:3000/Doctors/${id}`
 
          fetch(url,{method:"PUT",
@@ -199,43 +203,103 @@ let finalEdit=(id)=>{
          location.href="#showAddedDr"
 
 }
+// Cancel Edit Button Function
+let cancelEdit = () => {
+    let editForm = document.querySelector("#editForum");
+    editForm.style.display = "none";
+
+    location.href="#recentlyAddedDr"
+};
+
+
+
+
 
 
 /* Show Listed Doctor */
-let fetchDoctor = async () => {
+/* Fetch and Display Doctors */
+let doctorsData = []; // Store fetched data
+
+let fetchDoctors = async () => {
     try {
-        let tbody = document.querySelector(".tbody"); 
-        let url = `http://localhost:3000/Doctors`;   // Fetch ALL doctors
-        let res = await fetch(url, { method: "GET" });
+        let res = await fetch("http://localhost:3000/Doctors");
+        doctorsData = await res.json(); // Store data globally
 
-        let data = await res.json(); 
-        tbody.innerHTML = ""; // Clear previous data
-
-        
-
-        // Loop through doctors and insert into table
-        data.forEach((e) => {
-            tbody.innerHTML += `
-                <tr>
-                    <td>${e.name}</td>
-                    <td>${e.age}</td>
-                    <td>${e.gender}</td>
-                    <td>${e.speciality}</td>
-                    <td>${e.timing}</td>
-                    <td>₹ ${e.Consultancy}</td>
-                    <td>${e.contact}</td>
-                    <td>
-                        <button onclick="editDoctor('${e.id}')" id="editbutton">Edit</button>
-                        <button onclick="deleteDoctor('${e.id}')" id="removebutton">Remove</button>
-                    </td>
-                </tr>
-            `;
-        });
-
+        updatePagination(doctorsData); // Apply pagination
     } catch (error) {
         console.error("Error fetching doctors:", error);
     }
 };
 
-// Ensure the function runs when the page loads
-window.onload = fetchDoctor;
+let displayDoctors = (dr) => {
+    let tbody = document.querySelector(".tbody");
+    tbody.innerHTML = ""; // Clear previous data
+
+    if (dr.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8">No doctors found.</td></tr>`;
+        return;
+    }
+
+    dr.forEach((e) => {
+        let row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${e.name}</td>
+            <td>${e.age}</td>
+            <td>${e.gender}</td>
+            <td>${e.speciality}</td>
+            <td>${e.timing}</td>
+            <td>₹ ${e.fees}</td>
+            <td>${e.contact}</td>
+            <td>
+                <button id="editbutton" onclick="editDoctorList('${e.id}')">Edit</button>
+                <button id="removebutton" onclick="deleteDoctor('${e.id}')">Remove</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+};
+
+/* Delete Doctor From list */
+let deleteDoctor=(id)=>{
+    let url = `http://localhost:3000/Doctors/${id}`
+
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Perform the DELETE request only if the user confirms
+            fetch(url, { method: "DELETE" })
+             }
+            })
+}
+
+
+/* Pagination Function */
+let updatePagination = (data) => {
+    $("#pagination").pagination({
+        dataSource: data,
+        pageSize: 5,
+        callback: displayDoctors, // Call display function with paginated data
+    });
+};
+
+/* Search Function */
+let searchDoctors = () => {
+    let query = document.querySelector("#search").value.toLowerCase();
+    let filteredData = doctorsData.filter((e) => 
+        e.name.toLowerCase().includes(query) || 
+        e.speciality.toLowerCase().includes(query) ||
+        e.fees.toLowerCase().includes(query) ||
+        e.gender.toLowerCase() === query // Gender must match exactly
+    );
+    updatePagination(filteredData); // Reapply pagination with filtered results
+};
+
+/* Load Data on Page Load */
+window.onload = fetchDoctors;

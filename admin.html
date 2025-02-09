@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+   <!-- Pagination CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
+
     
 </head>
-<body onload="getNewDoctor()">
+<body>
     <nav class="sidebar">
         <h2>Admin Panel</h2>
         <a href="#">Dashboard</a>
@@ -37,10 +44,9 @@
         <hr class="hr1">
 
 
-        <!-- Add New Doctor -->
+        <!-- Add New Doctor Form -->
         <div class="form-container">
            
-
             <div class="addDoctorForm">
                 <h2>Add New Doctor</h2>
                 <p> Name :   </p>  <input id="newDoctorName" type="text" placeholder="Name">
@@ -66,16 +72,20 @@
                 <p> <input id="addDoctor"  onclick="addDoctor()" type="submit" value="Add Doctor"> </p>
             </div>
 
-            <div class="drsAdded"> <!-- Added Doctors --> </div>
+             <!-- Show Recently Added Doctors -->
+            <div id="recentlyAddedDr"></div>
 
-            <!-- Edit Doctor -->
-            <div id="editForum" class="edit-doctor_cont">  <!-- Edit Doctor --> </div>
+            <!-- Edit Doctor Form -->
+            <div id="editForum" class="edit-doctor_cont">  </div>
 
         </div>
 
         
         <!-- All Listed Doctor -->
         <section id="body">
+            <h2>DOCTOR's LIST</h2>
+            <input type="text" id="search" placeholder="Search by Name or Speciality" onkeyup="searchDoctors()">
+            <span><button class="pagesearch">Search</button></span>
             <div id="doctors">
                 <table id="table">
                     <thead class="thead">
@@ -98,10 +108,21 @@
                     </tbody>
                 </table>
             </div>
+            <div id="pagination"></div>
         </section>
             
            
     </div>
+
+    
+    
+    <!-- jQuery CDN -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- Sweet alert -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     
+     <!-- Pagination.js CDN -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>

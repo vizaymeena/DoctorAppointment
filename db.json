@@ -2,39 +2,13 @@
   "User": {},
   "Doctors": [
     {
-      "id": "1",
-      "name": "Dr. Vijay Meena",
-      "age": "24",
-      "gender": "Male",
-      "speciality": "Surgeon",
-      "timing": "12 A.M - 6 P.M",
-      "fees": "500₹"
-    },
-    {
-      "id": "2",
-      "name": "Dr. Aditi Meena",
-      "age": "28",
-      "gender": "Female",
-      "speciality": "Dermantologists",
-      "timing": "12 A.M - 6 P.M",
-      "fees": "500₹"
-    },
-    {
-      "id": "3",
-      "name": "Dr. Vishal Meena",
-      "age": "27",
-      "gender": "Male",
-      "speciality": "Dentist",
-      "timing": "12 A.M - 6 P.M",
-      "fees": "500₹"
-    },
-    {
       "id": "4",
       "name": "Dr. Jatin Parmar",
       "age": "23",
       "gender": "Male",
       "speciality": "Physiatrists",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "2000₹"
     },
     {
@@ -44,6 +18,7 @@
       "gender": "Male",
       "speciality": "Cardiologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1500₹"
     },
     {
@@ -53,6 +28,7 @@
       "gender": "Male",
       "speciality": "Psychologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1000₹"
     },
     {
@@ -62,6 +38,7 @@
       "gender": "Male",
       "speciality": "Psychologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1000₹"
     },
     {
@@ -71,6 +48,7 @@
       "gender": "Female",
       "speciality": "Psychologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1000₹"
     },
     {
@@ -80,6 +58,7 @@
       "gender": "Female",
       "speciality": "Dermatologists",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1000₹"
     },
     {
@@ -89,6 +68,7 @@
       "gender": "Female",
       "speciality": "Surgeon",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "3000₹"
     },
     {
@@ -98,6 +78,7 @@
       "gender": "Female",
       "speciality": "Orthologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1000₹"
     },
     {
@@ -107,6 +88,7 @@
       "gender": "Female",
       "speciality": "Orthologist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "800₹"
     },
     {
@@ -116,6 +98,7 @@
       "gender": "Male",
       "speciality": "Dentist",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1200₹"
     },
     {
@@ -125,6 +108,7 @@
       "age": "22",
       "speciality": "Surgeon",
       "timing": "12 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "1500₹"
     },
     {
@@ -134,6 +118,7 @@
       "age": "30",
       "speciality": "Dentist",
       "timing": "9 A.M - 3 P.M",
+      "contact": "9876543210",
       "fees": "400₹"
     },
     {
@@ -143,6 +128,7 @@
       "age": "40",
       "speciality": "Cardiologist",
       "timing": "10 A.M - 4 P.M",
+      "contact": "9876543210",
       "fees": "700₹"
     },
     {
@@ -152,6 +138,7 @@
       "age": "35",
       "speciality": "Orthologist",
       "timing": "8 A.M - 2 P.M",
+      "contact": "9876543210",
       "fees": "600₹"
     },
     {
@@ -161,6 +148,7 @@
       "age": "28",
       "speciality": "Dermatologist",
       "timing": "11 A.M - 5 P.M",
+      "contact": "9876543210",
       "fees": "500₹"
     },
     {
@@ -170,6 +158,7 @@
       "age": "29",
       "speciality": "Psychologist",
       "timing": "2 P.M - 7 P.M",
+      "contact": "9876543210",
       "fees": "400₹"
     },
     {
@@ -179,6 +168,7 @@
       "age": "38",
       "speciality": "Surgeon",
       "timing": "9 A.M - 3 P.M",
+      "contact": "9876543210",
       "fees": "550₹"
     },
     {
@@ -188,6 +178,7 @@
       "age": "50",
       "speciality": "Dentist",
       "timing": "10 A.M - 6 P.M",
+      "contact": "9876543210",
       "fees": "450₹"
     },
     {
@@ -195,6 +186,7 @@
       "name": "Dr. Meena Bharti",
       "gender": "Female",
       "age": "45",
+      "contact": "9876543210",
       "speciality": "Cardiologist",
       "timing": "12 A.M - 6 P.M",
       "fees": "650₹"
@@ -206,6 +198,7 @@
       "age": "40",
       "speciality": "Orthologist",
       "timing": "11 A.M - 5 P.M",
+      "contact": "9876543210",
       "fees": "600₹"
     },
     {
@@ -215,35 +208,8 @@
       "speciality": "None",
       "timing": "12 Am - 10 Pm",
       "contact": "9876543210",
+      "fees": "600₹",
       "id": "4a0c"
-    },
-    {
-      "id": "3b11",
-      "name": "Vijay Meena",
-      "age": "35",
-      "gender": "male",
-      "contact": "9876543210",
-      "speciality": "Dentist",
-      "timing": "12 Am - 10 Pm"
-    },
-    {
-      "id": "4856",
-      "name": "Vijay Meena",
-      "age": "35",
-      "gender": "male",
-      "contact": "9876543210",
-      "speciality": "Dentist",
-      "Consultancy": "2000",
-      "timing": "12 Am - 10 Pm"
-    },
-    {
-      "name": "Jatin Parmar",
-      "age": "35",
-      "gender": "male",
-      "speciality": "Cardiologist",
-      "timing": "12 Am - 10 Pm",
-      "contact": "9876543210",
-      "id": "1147"
     }
   ],
   "Patient": []
