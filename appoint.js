@@ -1,4 +1,4 @@
-
+/* Book Appointment */
 /* Post Method */
 
 async function appSubmit() {
@@ -64,7 +64,7 @@ async function appSubmit() {
     return false;
 }
 
-
+/* Book Appointment */
 /* Get Method */
 //onload wala function
 let appoint = async () => {
@@ -114,7 +114,7 @@ let appoint = async () => {
 } 
    
 
-
+/* Book Appointment */
 /* Edit Method */
 
 /* Edit() defined above */
@@ -227,6 +227,7 @@ let finalEdit=(id)=>{
 
 /* Edit Method Ends */
 
+/* Book Appointment */
 /* Cancel Method */
 let finalCancel = (id) => {
     let url = `http://localhost:3000/Patient/${id}`

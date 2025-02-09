@@ -105,21 +105,16 @@ let removeDoctor=(id)=>{
 
 /* Update Recently Added Doctors Method */
 /* "GET METHOD FOR "PUT" */
-let editDoctor=async(id)=>{
-    let url = `http://localhost:3000/Doctors/${id}`
+let editDoctor = async (id) => {
+    let url = `http://localhost:3000/Doctors/${id}`;
 
-    let res = await fetch(url,{method:"GET"});
+    let res = await fetch(url, { method: "GET" });
     let data = await res.json();
 
-    let editDoctor = document.querySelector(".edit-doctor_cont")
-    editDoctor.style.display="flex";
-    
-    // let last = data[data.length-1]
+    let editDoctorCont = document.querySelector(".edit-doctor_cont");
+    editDoctorCont.style.display = "flex";
 
-    editDoctor.innerHTML="" // Remove earlier data
-
-    editDoctor.innerHTML+=
-    `
+    editDoctorCont.innerHTML = `
     <div class="drEditForm">
                 <h2>Edit Doctor Details</h2>
                 <p> Name :   </p>  <input value="${data.name}" id="newDrEditName" type="text" placeholder="Name">
@@ -128,8 +123,7 @@ let editDoctor=async(id)=>{
                 <p> Contact :</p>  <input value="${data.contact}" id="newDrEditContact" type="text" placeholder="Contact">
 
                 <p> Speciality :   
-                  <select name="" value=" ${data.speciality}" id="newDrEditSpeciality"> 
-                       
+                  <select name="" id="newDrEditSpeciality"> 
                       <option value="">Select Category</option>
                       <option value="Surgeon">Surgeon</option>
                       <option value="Dentist">Dental</option>
@@ -140,18 +134,34 @@ let editDoctor=async(id)=>{
                       <option value="Psychologist">Psychologist</option>
                   </select>
                 </p>
+                <p> Consultancy Fees : </p> <input value="${data.fees}" id="newDrEditFees" type="text" placeholder="Consultancy Fees">
+
                 <p> Timing : </p> <input value="${data.timing}" id="newDrEditTiming" type="text" placeholder="Timing">
                 
                 <p class="editActions"> 
                 <input id="addDrEditSubmit"  onclick="finalEdit('${data.id}')" type="submit" value="Submit"> 
-                <button onclick="cancelEdit('${data.id}')">Cancel</button>
+                <button onclick="cancelEdit()">Cancel</button>
                 </p>
+    </div>
+    `;
 
-            </div>
+    // Close form when clicking outside
+    document.addEventListener("click", function (event) {
+        let form = document.querySelector(".drEditForm");
+        if (editDoctorCont.style.display === "flex" && !form.contains(event.target)) {
+            editDoctorCont.style.display = "none";
+        }
+    });
 
-    `
-      location.href="#editForum"
-}
+    location.href = "#editForum";
+};
+
+// Cancel function to hide form
+let cancelEdit = () => {
+    document.querySelector(".edit-doctor_cont").style.display = "none";
+     location.href="#recentlyAddedDr"
+};
+
 
 /* Editing Doctor Details */
 /* "PUT METHOD" */
@@ -164,6 +174,7 @@ let finalEdit=(id)=>{
     let contact = document.querySelector("#newDrEditContact").value.trim()
     let speciality = document.querySelector("#newDrEditSpeciality").value.trim()
     let timing = document.querySelector("#newDrEditTiming").value.trim()
+    let fees = document.querySelector("#newDrEditFees").value.trim()
 
     if(!name || !age || !contact || !gender || !speciality || !timing){
         alert("Empty or Invalid Fields has been hit")
@@ -193,7 +204,7 @@ let finalEdit=(id)=>{
                 name:name,
                 age:age,
                 gender:gender,
-               
+                fees:fees,
                 speciality:speciality,
                 timing:timing,
                 contact:contact,
@@ -203,13 +214,6 @@ let finalEdit=(id)=>{
          location.href="#showAddedDr"
 
 }
-// Cancel Edit Button Function
-let cancelEdit = () => {
-    let editForm = document.querySelector("#editForum");
-    editForm.style.display = "none";
-
-    location.href="#recentlyAddedDr"
-};
 
 
 
@@ -303,3 +307,18 @@ let searchDoctors = () => {
 
 /* Load Data on Page Load */
 window.onload = fetchDoctors;
+
+
+
+
+
+
+// ====================================================================================================== //
+
+
+// locating To -- > updatedDoctors.html 
+
+let editDoctorList=(id)=>{
+    location.href=`./updatedDoctors.html?id=${id}`
+}
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="adminmedia.css">
 
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
@@ -17,14 +18,14 @@
 <body>
     <nav class="sidebar">
         <h2>Admin Panel</h2>
-        <a href="#">Dashboard</a>
-        <a href="#">Doctor Status</a>
-        <a href="#">Appointments</a>
+        <a href="./index.html">Home</a>
+        <a href="#">Updated Doctors</a>
+        <a href="./application.html">Appointments</a>
         <a href="#">Patients</a>
         <a href="#">Settings</a>
     </nav>
 
-    <div class="main-content">
+<main class="main-content">
         <div class="header">
             <h1>Admin Dashboard</h1>
         </div>
@@ -44,7 +45,7 @@
         <hr class="hr1">
 
 
-        <!-- Add New Doctor Form -->
+<!-- Add New Doctor Form -->
         <div class="form-container">
            
             <div class="addDoctorForm">
@@ -72,16 +73,17 @@
                 <p> <input id="addDoctor"  onclick="addDoctor()" type="submit" value="Add Doctor"> </p>
             </div>
 
-             <!-- Show Recently Added Doctors -->
+  <!-- Show Recently Added Doctors -->
             <div id="recentlyAddedDr"></div>
 
-            <!-- Edit Doctor Form -->
+  <!-- Edit Doctor Form -->
             <div id="editForum" class="edit-doctor_cont">  </div>
 
         </div>
+<!-- Add New Doctor Form Ends -->
 
         
-        <!-- All Listed Doctor -->
+<!-- All Listed Doctor -->
         <section id="body">
             <h2>DOCTOR's LIST</h2>
             <input type="text" id="search" placeholder="Search by Name or Speciality" onkeyup="searchDoctors()">
@@ -101,18 +103,20 @@
                         </tr>
                     </thead>
         
-                    <tbody class="tbody">
-        
-        
-        
-                    </tbody>
+                    <tbody class="tbody">  </tbody>
                 </table>
             </div>
             <div id="pagination"></div>
         </section>
-            
-           
-    </div>
+<!-- All Listed Doctor Ends -->
+
+
+
+
+</main>
+
+
+
 
     
     

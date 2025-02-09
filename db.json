@@ -2,14 +2,14 @@
   "User": {},
   "Doctors": [
     {
-      "id": "4",
       "name": "Dr. Jatin Parmar",
       "age": "23",
       "gender": "Male",
       "speciality": "Physiatrists",
+      "fees": "2000₹",
       "timing": "12 A.M - 6 P.M",
       "contact": "9876543210",
-      "fees": "2000₹"
+      "id": "4"
     },
     {
       "id": "5",
@@ -212,5 +212,78 @@
       "id": "4a0c"
     }
   ],
-  "Patient": []
+  "Patient": [
+    {
+      "name": "Vijay Meena",
+      "age": "21",
+      "gender": "Male",
+      "contact": "7987725298",
+      "address": "Bagoniya",
+      "pincode": "123456",
+      "id": "3d4d"
+    },
+    {
+      "name": "Priya Verma",
+      "age": "28",
+      "gender": "Female",
+      "contact": "8765432109",
+      "address": "Mp Nagar",
+      "pincode": "110001",
+      "id": "c3d4"
+    },
+    {
+      "name": "Rahul Yadav",
+      "age": "30",
+      "gender": "Male",
+      "contact": "7654321098",
+      "address": "Sehore",
+      "pincode": "400001",
+      "id": "e5f6"
+    },
+    {
+      "name": "Neha Kapoor",
+      "age": "26",
+      "gender": "Female",
+      "contact": "6543210987",
+      "address": "Raisen",
+      "pincode": "700001",
+      "id": "g7h8"
+    },
+    {
+      "name": "Suresh Patil",
+      "age": "35",
+      "gender": "Male",
+      "contact": "5432109876",
+      "address": "Vidisha",
+      "pincode": "411001",
+      "id": "i9j0"
+    },
+    {
+      "name": "Anjali Singh",
+      "age": "29",
+      "gender": "Female",
+      "contact": "4321098765",
+      "address": "Bhopal",
+      "pincode": "560001",
+      "id": "k1l2"
+    },
+    {
+      "name": "Deepak Choudhary",
+      "age": "40",
+      "gender": "Male",
+      "contact": "3210987654",
+      "address": "Bhopal",
+      "pincode": "600001",
+      "id": "m3n4"
+    },
+    {
+      "name": "Meera Reddy",
+      "age": "33",
+      "gender": "Female",
+      "contact": "2109876543",
+      "address": "Bhopal",
+      "pincode": "500001",
+      "id": "o5p6"
+    }
+  ]
 }

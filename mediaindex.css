@@ -1,0 +1,50 @@
+/* Responsive Styling for 360px - 460px Screens */
+@media screen and (min-width: 360px) and (max-width: 460px) {
+    /* Hide Navbar */
+    nav {
+        display: none;
+    }
+
+    /* Adjust Hospital Title */
+    .title h1 {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Doctor Selection */
+    .expert-doctor {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .dr-cat select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Doctor List Table - Scrollable */
+    .doctor-list {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .doctorTable {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Adjust Pagination */
+    #pagin {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
